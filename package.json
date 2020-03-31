@@ -1,0 +1,84 @@
+{
+  "name": "@mobilabs/es6kadoo",
+  "version": "0.0.0-alpha.0",
+  "description": "A template for writing pure ES6 Javascript libraries",
+  "main": "index.js",
+  "bin": {
+    "es6kadoo": "./bin/es6kadoo.js"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "watch": "gulp watch",
+    "dev": "gulp rundev",
+    "test": "cross-env NODE_ENV=test nyc --reporter=lcov mocha --require esm ./test/main.js",
+    "display-coverage": "opener ./coverage/lcov-report/index.html",
+    "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+    "report-coverage": "nyc report --reporter=text-lcov | coveralls",
+    "report": "nyc report",
+    "makedist": "gulp makedist",
+    "app": "gulp runapp",
+    "makeprivate": "gulp makeprivate && sh tasks/compress.sh ${npm_package_name} ${npm_package_version} @mobilabs",
+    "makelib": "gulp build && gulp makedist && gulp makeprivate && sh tasks/compress.sh ${npm_package_name} ${npm_package_version}",
+    "doc": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jclo/es6kadoo.git"
+  },
+  "keywords": [
+    "es6",
+    "umd",
+    "library",
+    "template",
+    "boilerplate",
+    "gulp",
+    "mocha",
+    "istanbul"
+  ],
+  "author": {
+    "name": "Mobilabs",
+    "email": "contact@mobilabs.fr",
+    "url": "http://www.mobilabs.fr"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jclo/es6kadoo/issues"
+  },
+  "homepage": "https://github.com/jclo/es6kadoo",
+  "dependencies": {
+    "nopt": "^4.0.3",
+    "shelljs": "^0.8.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.9",
+    "cross-env": "^7.0.2",
+    "del": "^5.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "esm": "^3.2.25",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-header": "^2.0.9",
+    "gulp-modulify": "0.0.5",
+    "gulp-replace": "^1.0.0",
+    "gulp-uglify-es": "^2.0.0",
+    "husky": "^4.2.3",
+    "kadoo": "0.0.0-alpha.1",
+    "mocha": "^7.1.0",
+    "nyc": "^15.0.0",
+    "open": "^7.0.3",
+    "opener": "^1.5.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "private": false,
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build && npm run makedist && npm run test && npm run check-coverage && npm run report"
+    }
+  }
+}
