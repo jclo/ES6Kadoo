@@ -25,7 +25,7 @@
  *
  *
  *
- * @namespace    ES6Kadoo
+ * @namespace    -
  * @dependencies none
  * @exports      -
  * @author       -
