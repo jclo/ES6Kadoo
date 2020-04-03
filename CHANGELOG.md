@@ -6,4 +6,5 @@
   * First build,
   * First release candidate,
   * Second release candidate,
+  * Updated the version number,
   * ...,

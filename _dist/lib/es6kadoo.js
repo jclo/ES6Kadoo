@@ -1,5 +1,5 @@
 /*! ****************************************************************************
- * ES6Kadoo v0.0.0-beta.1
+ * ES6Kadoo v0.0.0-beta.2
  *
  * A template for writing pure ES6 Javascript libraries.
  * (you can download it from npm or github repositories)
@@ -122,7 +122,7 @@
     };
 
     // Attaches a constant to ES6Kadoo that provides the version of the lib.
-    ES6Kadoo.VERSION = '0.0.0-beta.1';
+    ES6Kadoo.VERSION = '0.0.0-beta.2';
 
 
     // -- Public Static Methods ------------------------------------------------
