@@ -19,6 +19,7 @@ const pack   = require('../package.json')
 // -- Local Constants
 const destination = config.libdir
     , { source }  = config
+    , { libname } = config
     , { name }    = config
     , { version } = pack
     ;
@@ -40,6 +41,7 @@ function dolib() {
   const kadoo = Kadoo(source);
 
   return kadoo.bundle()
+    .pipe(replace('{{lib:name}}', libname))
     .pipe(replace('{{lib:version}}', version))
     .pipe(concat(`${name}.js`))
     .pipe(dest(destination))

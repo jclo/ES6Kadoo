@@ -14,6 +14,10 @@
  *  . ES6Kadoo                    creates and returns the ES6Kadoo object,
  *
  *
+ * Private Static Methods:
+ *  . _setTestMode                returns internal objects for testing purpose,
+ *
+ *
  * Public Static Methods:
  *  . noConflict                  returns a reference to this ES6Kadoo object,
  *
@@ -32,7 +36,7 @@
  * @version      -
  * ********************************************************************** */
 /* global root */
-/* eslint-disable one-var, semi-style */
+/* eslint-disable one-var, semi-style, no-underscore-dangle */
 
 
 // -- Vendor Modules
@@ -92,6 +96,10 @@ function extend(object, m) {
  */
 const ES6Kadoo = function(name) {
   const obj = {};
+  obj.library = {
+    name: '{{lib:name}}',
+    version: '{{lib:version}}',
+  };
   obj.name = name;
   extend(obj, methods);
   return obj;
@@ -99,6 +107,22 @@ const ES6Kadoo = function(name) {
 
 // Attaches a constant to ES6Kadoo that provides the version of the lib.
 ES6Kadoo.VERSION = '{{lib:version}}';
+
+
+// -- Private Static Methods ---------------------------------------------
+
+/**
+ * Returns the internal objects for testing purpose.
+ *
+ * @method ()
+ * @private
+ * @param {}                -,
+ * @returns {Object}        returns a list of internal objects,
+ * @since 0.0.0
+ */
+ES6Kadoo._setTestMode = function() {
+  return [];
+};
 
 
 // -- Public Static Methods ------------------------------------------------
@@ -159,4 +183,4 @@ methods = {
 // -- Export
 export default ES6Kadoo;
 
-/* eslint-enable one-var, semi-style */
+/* eslint-enable one-var, semi-style, no-underscore-dangle */

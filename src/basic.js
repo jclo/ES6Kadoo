@@ -10,6 +10,10 @@
  *  . none,
  *
  *
+ * Private Static Methods:
+ *  . _setTestMode                returns internal objects for testing purpose,
+ *
+ *
  * Public Static Methods:
  *  . noConflict                  returns a reference to this ES6Kadoo object,
  *  . getString                   returns a string,
@@ -25,7 +29,7 @@
  * @version      -
  * ********************************************************************** */
 /* global root */
-/* - */
+/* eslint-disable no-underscore-dangle */
 
 
 // -- Vendor Modules
@@ -44,9 +48,32 @@ const previousES6Kadoo = root.ES6Kadoo;
 // -- Local Variables
 
 
-// -- Public Static Methods ------------------------------------------------
+// -- Main -----------------------------------------------------------------
 
 const ES6Kadoo = {
+
+  // Useful to retrieve the library name and version when it is
+  // embedded in another library as an object:
+  library: { name: '{{lib:name}}', version: '{{lib:version}}' },
+
+
+  // -- Private Static Methods ---------------------------------------------
+
+  /**
+   * Returns the internal objects for testing purpose.
+   *
+   * @method ()
+   * @private
+   * @param {}                -,
+   * @returns {Object}        returns a list of internal objects,
+   * @since 0.0.0
+   */
+  _setTestMode() {
+    return [];
+  },
+
+
+  // -- Public Static Methods ----------------------------------------------
 
   /**
    * Returns a reference to this ES6Kadoo object.
@@ -102,4 +129,4 @@ ES6Kadoo.VERSION = '{{lib:version}}';
 // -- Export
 export default ES6Kadoo;
 
-/* - */
+/* eslint-enable no-underscore-dangle */

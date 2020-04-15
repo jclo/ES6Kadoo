@@ -1,6 +1,6 @@
 // ESLint declarations:
 /* global describe, it */
-/* eslint one-var: 0, no-unused-vars: 0, semi-style: 0 */
+/* eslint one-var: 0, no-unused-vars: 0, semi-style: 0, no-underscore-dangle: 0 */
 
 
 // -- Vendor Modules
@@ -23,11 +23,20 @@ const ES6Kadoo = require('../index')
 // -- Main
 describe('Test ES6Kadoo:', () => {
   // Test the lib:
-  describe('Test ES6Kadoo.VERSION and ES6Kadoo.noConflict:', () => {
+  describe('Test ES6Kadoo.VERSION, ES6Kadoo._setTestMode and ES6Kadoo.noConflict:', () => {
     it('Expects ES6Kadoo.VERSION to return a string.', () => {
       expect(ES6Kadoo.VERSION).to.be.a('string');
     });
-    it('Expects ES6Kadoo.noConflict to return a function.', () => {
+
+    it('Expects ES6Kadoo._setTestMode to be a function.', () => {
+      expect(ES6Kadoo._setTestMode).to.be.a('function');
+    });
+
+    it('Expects ES6Kadoo._setTestMode() to return an array.', () => {
+      expect(ES6Kadoo._setTestMode()).to.be.an('array');
+    });
+
+    it('Expects ES6Kadoo.noConflict to be a function.', () => {
       expect(ES6Kadoo.noConflict).to.be.a('function');
     });
   });
