@@ -9,4 +9,5 @@
   * Updated the version number,
   * Added a private method for helping to test the internal objects,
   * Added two properties to access to the library name and version,
+  * Third release candidate,
   * ...,
