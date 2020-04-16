@@ -1,6 +1,6 @@
 ### HEAD
 
-### 0.0.0 (April 15, 2020)
+### 0.0.0 (April 16, 2020)
 
   * Initial commit,
   * First build,
@@ -11,4 +11,5 @@
   * Added two properties to access to the library name and version,
   * Third release candidate,
   * Fixed a few typos in the README.md file,
+  * Fourth release candidate,
   * ...,
