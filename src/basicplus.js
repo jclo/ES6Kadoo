@@ -99,7 +99,7 @@ const ES6Kadoo = {
   },
 
 
-  // -- Public Static Methods ------------------------------------------------
+  // -- Public Static Methods ----------------------------------------------
 
   /**
    * Returns a reference to this ES6Kadoo object.

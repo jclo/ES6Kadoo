@@ -1,5 +1,5 @@
 /*! ****************************************************************************
- * ES6Kadoo v0.0.0-beta.3
+ * ES6Kadoo v0.0.0-beta.4
  *
  * A template for writing pure ES6 Javascript libraries.
  * (you can download it from npm or github repositories)
@@ -123,17 +123,17 @@
       const obj = Object.create(methods);
       obj.library = {
         name: 'ES6Kadoo',
-        version: '0.0.0-beta.3',
+        version: '0.0.0-beta.4',
       };
       obj.name = name;
       return obj;
     };
 
     // Attaches a constant to ES6Kadoo that provides the version of the lib.
-    ES6Kadoo.VERSION = '0.0.0-beta.3';
+    ES6Kadoo.VERSION = '0.0.0-beta.4';
 
 
-    // -- Private Static Methods ---------------------------------------------
+    // -- Private Static Methods -----------------------------------------------
 
     /**
      * Returns the internal objects for testing purpose.

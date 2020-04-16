@@ -83,7 +83,7 @@ const ES6Kadoo = function(name) {
 ES6Kadoo.VERSION = '{{lib:version}}';
 
 
-// -- Private Static Methods ---------------------------------------------
+// -- Private Static Methods -----------------------------------------------
 
 /**
  * Returns the internal objects for testing purpose.

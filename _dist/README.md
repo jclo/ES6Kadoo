@@ -14,7 +14,7 @@
 
 The build doesn't require a transpiler (like babel) or a builder (like browserify, webpack or rollup) to produce a module that runs in the browser from source files that use `import` and `export` statements. It is useful if you want to keep your source code quite pure.
 
-`ES6Kadoo` relies on `kadoo` to drastically reduces the amount of extra code added to your library (go to [kadoo](https://www.npmjs.com/package/kadoo) for details).
+`ES6Kadoo` relies on `Kadoo` to drastically reduces the amount of extra code added to your library (go to [kadoo](https://www.npmjs.com/package/kadoo) for details).
 
 `ES6Kadoo` relies on [Mocha](https://mochajs.org) and [Chai](http://chaijs.com) for unitary testing. It relies on [Istanbul](https://gotwarlost.github.io/istanbul/) for code coverage.
 
@@ -158,22 +158,22 @@ Enjoy!
 
 <!--- URls -->
 
-[npm-image]: https://img.shields.io/npm/v/@mobilabs/ES6Kadoo.svg?style=flat-square
-[npm-install-image]: https://nodei.co/npm/@mobilabs/ES6Kadoo.png?compact=true
+[npm-image]: https://img.shields.io/npm/v/@mobilabs/es6kadoo.svg?style=flat-square
+[npm-install-image]: https://nodei.co/npm/@mobilabs/es6kadoo.png?compact=true
 [node-image]: https://img.shields.io/badge/node.js-%3E=_0.10-green.svg?style=flat-square
-[download-image]: https://img.shields.io/npm/dm/@mobilabs/ES6Kadoo.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/jclo/ES6Kadoo.svg?style=flat-square
-[coveralls-image]: https://img.shields.io/coveralls/jclo/ES6Kadoo/master.svg?style=flat-square
-[dependencies-image]: https://david-dm.org/jclo/ES6Kadoo/status.svg?theme=shields.io
-[devdependencies-image]: https://david-dm.org/jclo/ES6Kadoo/dev-status.svg?theme=shields.io
-[license-image]: https://img.shields.io/npm/l/@mobilabs/ES6Kadoo.svg?style=flat-square
+[download-image]: https://img.shields.io/npm/dm/@mobilabs/es6kadoo.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/jclo/es6kadoo.svg?style=flat-square
+[coveralls-image]: https://img.shields.io/coveralls/jclo/es6kadoo/master.svg?style=flat-square
+[dependencies-image]: https://david-dm.org/jclo/es6kadoo/status.svg?theme=shields.io
+[devdependencies-image]: https://david-dm.org/jclo/es6kadoo/dev-status.svg?theme=shields.io
+[license-image]: https://img.shields.io/npm/l/@mobilabs/es6kadoo.svg?style=flat-square
 
-[npm-url]: https://www.npmjs.com/package/@mobilabs/ES6Kadoo
-[npm-install-url]: https://nodei.co/npm/@mobilabs/ES6Kadoo
+[npm-url]: https://www.npmjs.com/package/@mobilabs/es6kadoo
+[npm-install-url]: https://nodei.co/npm/@mobilabs/es6kadoo
 [node-url]: http://nodejs.org/download
-[download-url]: https://www.npmjs.com/package/@mobilabs/ES6Kadoo
-[travis-url]: https://travis-ci.org/jclo/ES6Kadoo
-[coveralls-url]: https://coveralls.io/github/jclo/ES6Kadoo?branch=master
-[dependencies-url]: https://david-dm.org/jclo/ES6Kadoo
-[devdependencies-url]: https://david-dm.org/jclo/ES6Kadoo?type=dev
+[download-url]: https://www.npmjs.com/package/@mobilabs/es6kadoo
+[travis-url]: https://travis-ci.org/jclo/es6kadoo
+[coveralls-url]: https://coveralls.io/github/jclo/es6kadoo?branch=master
+[dependencies-url]: https://david-dm.org/jclo/es6kadoo
+[devdependencies-url]: https://david-dm.org/jclo/es6kadoo?type=dev
 [license-url]: http://opensource.org/licenses/MIT
