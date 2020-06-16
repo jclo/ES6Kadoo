@@ -54,7 +54,7 @@
     "coveralls": "^3.0.9",
     "cross-env": "^7.0.2",
     "del": "^5.1.0",
-    "eslint": "^6.8.0",
+    "eslint": "^7.2.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.1",
     "esm": "^3.2.25",
@@ -66,7 +66,7 @@
     "gulp-uglify-es": "^2.0.0",
     "husky": "^4.2.3",
     "kadoo": "0.0.0-beta.2",
-    "mocha": "^7.1.0",
+    "mocha": "^8.0.1",
     "nyc": "^15.0.0",
     "open": "^7.0.3",
     "opener": "^1.5.1"
