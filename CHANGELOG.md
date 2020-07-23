@@ -15,4 +15,5 @@
   * Fifth release candidate,
   * Updated the dependencies,
   * Updated the Kadoo package,
+  * Sixth release candidate,
   * ...,
