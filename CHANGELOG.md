@@ -1,6 +1,6 @@
 ### HEAD
 
-### 0.0.0 (June 16, 2020)
+### 0.0.0 (July 23, 2020)
 
   * Initial commit,
   * First build,
@@ -12,5 +12,7 @@
   * Third release candidate,
   * Fixed a few typos in the README.md file,
   * Fourth release candidate,
-  * Updated dependencies,
+  * Fifth release candidate,
+  * Updated the dependencies,
+  * Updated the Kadoo package,
   * ...,
