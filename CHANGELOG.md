@@ -1,6 +1,6 @@
 ### HEAD
 
-### 0.0.0 (July 23, 2020)
+### 0.0.0 (July 28, 2020)
 
   * Initial commit,
   * First build,
@@ -16,4 +16,5 @@
   * Updated the dependencies,
   * Updated the Kadoo package,
   * Sixth release candidate,
+  * Added the option to generate an ES6 Module,
   * ...,

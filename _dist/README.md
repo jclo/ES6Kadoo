@@ -28,16 +28,16 @@ You can easily get your first `ES6Kadoo` library running in a couple of minutes 
 Then, you have to install the `ES6Kadoo` package globally. Open a terminal session and type the command line:
 
 ```bash
-npm install ES6Kadoo -g
+npm install @mobilabs/ES6Kadoo -g
 ```
 
 Or, if you don't have the rights to install es6lib globally, you can install it locally in your project. Open a terminal session, move to your working directory - the empty folder you created - and type the following command line:
 
 ```bash
-npm install ES6Kadoo
+npm install @mobilabs/ES6Kadoo
 ```
 
-Now populate your empty folder and create your first UMD library:
+Now populate your empty folder and create your first UMD and ES6 library:
 
 ```bash
 // populate
@@ -53,9 +53,10 @@ Now your folder contains the following files:
 ```bash
 Your project Folder
       |_ lib
-      |   |_ lib.js           // Your built ES6 module,
+      |   |_ lib.js           // Your built UMD module,
+      |   |_ lib.mjs          // Your built ES6 module,
       |_ src
-      |   |_ ...               // The source files of your library,
+      |   |_ ...              // The source files of your library,
       |   |_ ...
       |   |_ ...
       |_ tasks
@@ -142,9 +143,25 @@ Inside the browser, pick-up the JS file `lib/mylib.js` and add it as a script in
 <!DOCTYPE html>
 <html>
   <body>
-    <script src="mylib.js"></script>
+    <script src="./path_to_your_lib/mylib.js"></script>
     <script>
     	console.log(mylib.VERSION);
+    </script>
+  </body>
+</html>
+```
+
+Or,
+
+```html
+<!DOCTYPE html>
+<html>
+  <body>
+    <script src="./path_to_your_lib/mylib.js"></script>
+    <script type="module">
+      import mylib from './<path_to_your_lib>/mylib.mjs';
+
+      console.log(mylib.VERSION);
     </script>
   </body>
 </html>
