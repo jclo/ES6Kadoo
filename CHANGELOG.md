@@ -19,4 +19,5 @@
   * Added the option to generate an ES6 Module,
   * Seventh release candidate,
   * Updated the project with Kadoo 0.0.0-beta.5,
+  * Eighth release candidate,
   * ...,
