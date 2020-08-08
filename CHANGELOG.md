@@ -21,4 +21,5 @@
   * Updated the project with Kadoo 0.0.0-beta.5,
   * Eighth release candidate,
   * Updated the project dependencies,
+  * Ninth release candidate,
   * ...,
