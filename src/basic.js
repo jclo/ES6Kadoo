@@ -5,7 +5,6 @@
  * basic.js is just a literal object that contains a set of functions. It
  * can't be intantiated.
  *
- *
  * Private Functions:
  *  . none,
  *
@@ -82,7 +81,7 @@ const ES6Kadoo = {
    * (must not be deleted)
    *
    * Nota:
-   * Running ES6Kadoo in noConflic mode, returns the ES6Kadoo variable to
+   * Running ES6Kadoo in noConflict mode, returns the ES6Kadoo variable to
    * its previous owner.
    *
    * @method ()

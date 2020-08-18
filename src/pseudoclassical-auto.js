@@ -112,7 +112,7 @@ ES6Kadoo._setTestMode = function() {
  * (must not be deleted)
  *
  * Nota:
- * Running ES6Kadoo in noConflic mode, returns the ES6Kadoo variable to
+ * Running ES6Kadoo in noConflict mode, returns the ES6Kadoo variable to
  * its previous owner.
  *
  * @method ()

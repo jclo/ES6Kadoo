@@ -25,4 +25,5 @@
   * Added the method "whoami",
   * Reorganised the test folder,
   * Tenth release candidate,
+  * Fixed a minor issues,
   * ...,
