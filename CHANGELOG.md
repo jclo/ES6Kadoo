@@ -24,4 +24,5 @@
   * Ninth release candidate,
   * Added the method "whoami",
   * Reorganised the test folder,
+  * Tenth release candidate,
   * ...,
