@@ -1,6 +1,6 @@
 ### HEAD
 
-### 0.0.0 (August 8, 2020)
+### 0.0.0 (August 18, 2020)
 
   * Initial commit,
   * First build,
@@ -22,4 +22,6 @@
   * Eighth release candidate,
   * Updated the project dependencies,
   * Ninth release candidate,
+  * Added the method "whoami",
+  * Reorganised the test folder,
   * ...,

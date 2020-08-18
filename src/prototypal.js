@@ -23,6 +23,7 @@
  *
  *
  * Public Methods:
+ *  . whoami                      returns the library name and version,
  *  . getString                   returns a string,
  *  . getArray                    returns an array,
  *
@@ -72,7 +73,7 @@ let methods
  */
 const ES6Kadoo = function(name) {
   const obj = Object.create(methods);
-  obj.library = {
+  obj._library = {
     name: '{{lib:name}}',
     version: '{{lib:version}}',
   };
@@ -80,7 +81,8 @@ const ES6Kadoo = function(name) {
   return obj;
 };
 
-// Attaches a constant to ES6Kadoo that provides the version of the lib.
+// Attaches constants to ES6Kadoo that provide name and version of the lib.
+ES6Kadoo.NAME = '{{lib:name}}';
 ES6Kadoo.VERSION = '{{lib:version}}';
 
 
@@ -88,6 +90,7 @@ ES6Kadoo.VERSION = '{{lib:version}}';
 
 /**
  * Returns the internal objects for testing purpose.
+ * (must not be deleted)
  *
  * @method ()
  * @private
@@ -104,6 +107,7 @@ ES6Kadoo._setTestMode = function() {
 
 /**
  * Returns a reference to this ES6Kadoo object.
+ * (must not be deleted)
  *
  * Nota:
  * Running ES6Kadoo in noConflic mode, returns the ES6Kadoo variable to
@@ -115,7 +119,6 @@ ES6Kadoo._setTestMode = function() {
  * @returns {Object}        returns the ES6Kadoo object,
  * @since 0.0.0
  */
-/* istanbul ignore next */
 ES6Kadoo.noConflict = function() {
   /* eslint-disable-next-line no-param-reassign */
   root.ES6Kadoo = previousES6Kadoo;
@@ -126,6 +129,20 @@ ES6Kadoo.noConflict = function() {
 // -- Public Methods -------------------------------------------------------
 
 methods = {
+
+  /**
+   * Returns the library name and version.
+   * (must not be deleted)
+   *
+   * @method ()
+   * @public
+   * @param {}              -,
+   * @returns {Object}      returns the library name and version,
+   * @since 0.0.0
+   */
+  whoami() {
+    return this._library;
+  },
 
   /**
    * Returns a string.

@@ -113,9 +113,22 @@ const index = [
   "module.exports = require('./lib/{{lib:lowname}}');",
   ''].join('\n');
 
-const gitignore = '';
-const eslintignore = '';
-const npmignore = '';
+const gitignore = [
+  '.DS_Store',
+  '',
+  '.nyc_output',
+  'coverage',
+  'node_modules',
+  ''].join('\n');
+
+const eslintignore = [
+  '_dist/lib/{{lib:lowname}}.min.*',
+  ''].join('\n');
+
+const npmignore = [
+  '*',
+  '!_dist/**/*',
+  ''].join('\n');
 
 
 // -- Private Functions --------------------------------------------------------
@@ -258,7 +271,7 @@ function _customize(source, dest, app, owner) {
   pack.version = '0.0.0-alpha.0';
   pack.description = `${app} ...`;
   pack.main = `_dist/lib/${app.toLowerCase()}.js`;
-  pack.minified = `_dist/lib/${app.toLowerCase()}.js`;
+  pack.minified = `_dist/lib/${app.toLowerCase()}.min.js`;
   pack.unpkg = `_dist/lib/${app.toLowerCase()}.mjs`;
   pack.module = `_dist/lib/${app.toLowerCase()}.min.mjs`;
   pack.bin = {};

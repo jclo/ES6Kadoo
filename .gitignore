@@ -5,6 +5,4 @@ _old_*
 .nyc_output
 coverage
 node_modules
-
-_dist
 private_repo
