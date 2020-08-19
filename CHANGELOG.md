@@ -29,4 +29,5 @@
   * Eleventh release candidate,
   * Updated the project dependencies,
   * Restructured the test set,
+  * Twelfth release candidate,
   * ...,
