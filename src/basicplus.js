@@ -92,8 +92,8 @@ const ES6Kadoo = {
    *
    * @method ()
    * @private
-   * @param {}                -,
-   * @returns {Object}        returns a list of internal objects,
+   * @param {}              -,
+   * @returns {Object}      returns a list of internal objects,
    * @since 0.0.0
    */
   _setTestMode() {

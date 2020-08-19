@@ -64,21 +64,20 @@ const previousES6Kadoo = root.ES6Kadoo
  * Returns the ES6Kadoo object.
  * (Pseudoclassical Instantation Pattern with auto instantatiation - no need for new)
  *
- * @constructor (arg1)
+ * @constructor ()
  * @public
- * @param {String}          the argument to be saved as an object variable,
+ * @param {}                -,
  * @returns {Object}        returns the ES6Kadoo object,
  * @since 0.0.0
  */
-const ES6Kadoo = function(name) {
+const ES6Kadoo = function() {
   if (this instanceof ES6Kadoo) {
     this._library = {
       name: '{{lib:name}}',
       version: '{{lib:version}}',
     };
-    this.name = name;
   } else {
-    return new ES6Kadoo(name);
+    return new ES6Kadoo();
   }
   return null;
 };

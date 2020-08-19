@@ -63,13 +63,13 @@ const previousES6Kadoo = root.ES6Kadoo
  * Returns the ES6Kadoo object.
  * (Pseudoclassical Instantiation Pattern)
  *
- * @constructor (arg1)
+ * @constructor ()
  * @public
- * @param {String}          the argument to be saved as an object variable,
+ * @param {}                -,
  * @returns {Object}        returns the ES6Kadoo object,
  * @since 0.0.0
  */
-const ES6Kadoo = function(name) {
+const ES6Kadoo = function() {
   if (!(this instanceof ES6Kadoo)) {
     throw new Error('ES6Kadoo needs to be called with the new keyword!');
   }
@@ -77,7 +77,6 @@ const ES6Kadoo = function(name) {
     name: '{{lib:name}}',
     version: '{{lib:version}}',
   };
-  this.name = name;
 };
 
 // Attaches constants to ES6Kadoo that provide name and version of the lib.
