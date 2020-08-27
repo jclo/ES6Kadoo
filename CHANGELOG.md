@@ -31,4 +31,4 @@
   * Restructured the test set,
   * Twelfth release candidate,
   * Updated the project dependencies,
-  * ...,
+  * Release.
