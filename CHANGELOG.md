@@ -1,6 +1,6 @@
 ### HEAD
 
-### 0.0.0 (August 19, 2020)
+### 1.0.0 (August 27, 2020)
 
   * Initial commit,
   * First build,
@@ -30,4 +30,5 @@
   * Updated the project dependencies,
   * Restructured the test set,
   * Twelfth release candidate,
+  * Updated the project dependencies,
   * ...,

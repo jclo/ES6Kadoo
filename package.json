@@ -1,6 +1,6 @@
 {
   "name": "@mobilabs/es6kadoo",
-  "version": "0.0.0-beta.12",
+  "version": "1.0.0",
   "description": "A template for writing pure ES6 Javascript libraries",
   "main": "index.js",
   "minified": "_dist/lib/es6kadoo.min.js",
@@ -68,10 +68,10 @@
     "gulp-replace": "^1.0.0",
     "gulp-uglify-es": "^2.0.0",
     "husky": "^4.2.5",
-    "kadoo": "0.0.0-beta.7",
-    "mocha": "^8.1.1",
+    "kadoo": "^1.0.0",
+    "mocha": "^8.1.2",
     "nyc": "^15.1.0",
-    "open": "^7.1.0",
+    "open": "^7.2.0",
     "opener": "^1.5.1"
   },
   "publishConfig": {
