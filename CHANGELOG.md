@@ -3,7 +3,7 @@
 ### 1.0.1 (August 29, 2020)
 
   * Updated es6kadoo.js script to make easier the project creation,
-  * ...,
+  * Release.
 
 
 ### 1.0.0 (August 27, 2020)
