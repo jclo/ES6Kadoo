@@ -81,7 +81,7 @@ const ES6Kadoo = {
    * (must not be deleted)
    *
    * Nota:
-   * Running ES6Kadoo in noConflict mode, returns the ES6Kadoo variable to
+   * Running ES6Kadoo in no conflict mode, returns the ES6Kadoo variable to
    * its previous owner.
    *
    * @method ()
@@ -112,6 +112,7 @@ const ES6Kadoo = {
 
   /**
    * Returns a string.
+   * (must be deleted)
    *
    * @method ()
    * @public
@@ -125,6 +126,7 @@ const ES6Kadoo = {
 
   /**
    * Returns an array.
+   * (must be deleted)
    *
    * @method ()
    * @public

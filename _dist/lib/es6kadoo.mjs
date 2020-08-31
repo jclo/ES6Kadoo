@@ -1,5 +1,5 @@
 /*! ****************************************************************************
- * ES6Kadoo v1.0.1
+ * ES6Kadoo v1.0.2
  *
  * A template for writing pure ES6 Javascript libraries.
  * (you can download it from npm or github repositories)
@@ -125,14 +125,14 @@ const $__ES6GLOB = {};
       const obj = Object.create(methods);
       obj._library = {
         name: 'ES6Kadoo',
-        version: '1.0.1',
+        version: '1.0.2',
       };
       return obj;
     };
 
     // Attaches constants to ES6Kadoo that provide name and version of the lib.
     ES6Kadoo.NAME = 'ES6Kadoo';
-    ES6Kadoo.VERSION = '1.0.1';
+    ES6Kadoo.VERSION = '1.0.2';
 
 
     // -- Private Static Methods -----------------------------------------------
@@ -195,6 +195,7 @@ const $__ES6GLOB = {};
 
       /**
        * Returns a string.
+       * (must be deleted)
        *
        * @method ()
        * @public
@@ -208,6 +209,7 @@ const $__ES6GLOB = {};
 
       /**
        * Returns an array.
+       * (must be deleted)
        *
        * @method ()
        * @public
@@ -235,7 +237,6 @@ const $__ES6GLOB = {};
      *
      * util.js is just a literal object that contains a set of functions. It
      * can't be intantiated.
-     *
      *
      * Private Functions:
      *  . _getString                  returns a string,
@@ -344,4 +345,4 @@ const $__ES6GLOB = {};
 }));
 
 // -- Export
-export default $__ES6GLOB.ES6Kadoo
+export default $__ES6GLOB.ES6Kadoo;

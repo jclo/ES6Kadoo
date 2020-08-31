@@ -2,6 +2,10 @@
 /* *****************************************************************************
  * es6kadoo.js creates the skeleton for writing ES6 Javascript libraries.
  *
+ * Nota:
+ * es6kaoo.js is a copy and paste of es6lib.js with a few minor changes
+ * (https://github.com/jclo/es6lib/blob/master/bin/es6lib.js).
+ *
  * The MIT License (MIT)
  *
  * Copyright (c) 2020 Mobilabs <contact@mobilabs.fr> (http://www.mobilabs.fr)
@@ -34,8 +38,9 @@ const fs    = require('fs')
     , shell = require('shelljs')
     ;
 
+
 // -- Local Variables
-const boilerlib   = 'ES6Kadoo'
+const defBoilerLib  = 'ES6Kadoo'
     /* eslint-disable-next-line object-curly-newline */
     , defAuthor   = { name: 'John Doe', acronym: 'jdo', email: 'jdo@johndoe.com', url: 'http://www.johndoe.com' }
     , copyright   = `Copyright (c) ${new Date().getFullYear()} {{author:name}} <{{author:email}}> ({{author:url}})`
@@ -51,6 +56,7 @@ const boilerlib   = 'ES6Kadoo'
       help: [Boolean, false],
       version: [String, null],
       path,
+      boilerlib: [String, null],
       name: [String, null],
       author: [String, null],
       acronym: [String, null],
@@ -61,6 +67,7 @@ const boilerlib   = 'ES6Kadoo'
       h: ['--help'],
       v: ['--version', version],
       p: ['--path'],
+      b: ['--boilerlib'],
       n: ['--name'],
       a: ['--author'],
       c: ['--acronym'],
@@ -69,6 +76,7 @@ const boilerlib   = 'ES6Kadoo'
     }
     , parsed = nopt(opts, shortOpts, process.argv, 2)
     ;
+
 
 // -- Templates
 const readme = [
@@ -157,6 +165,7 @@ function _help() {
     '',
     '-h, --help          output usage information',
     '-v, --version       output the version number',
+    '-b, --boilerlib     the name of the boilerplate',
     '-n, --name          the name of the app',
     '-a, --author        the name of the author (ex. "John Doe")',
     '-c, --acronym       the acronym of the author (ex. jdo)',
@@ -265,14 +274,15 @@ function _duplicate(source, dest) {
 /**
  * Customizes 'Package.json'.
  *
- * @function (arg1, arg2, arg3, arg4)
+ * @function (arg1, arg2, arg3, arg4, arg5)
  * @private
  * @param {String}          the source path,
  * @param {String}          the destination path,
  * @param {Object}          the author credentials,
+ * @param {String}          the name of the boilerplate,
  * @returns {}              -,
  */
-function _customize(source, dest, app, owner) {
+function _customize(source, dest, app, owner, boilerlib) {
   const npm = 'package.json';
 
   const json = shell.cat(`${source}/${npm}`);
@@ -319,10 +329,11 @@ function _customize(source, dest, app, owner) {
   pack.private = obj.private;
   pack.husky = obj.husky;
 
-  pack.devDependencies['@mobilabs/es6kadoo'] = version;
+  pack.devDependencies[`@mobilabs/${boilerlib.toLocaleLowerCase()}`] = version;
 
   delete pack.dependencies.nopt;
   delete pack.dependencies.shelljs;
+  delete pack.devDependencies['@mobilabs/es6lib'];
 
   process.stdout.write(`  updated ${npm}\n`);
   json.stdout = JSON.stringify(pack, null, 2);
@@ -332,15 +343,16 @@ function _customize(source, dest, app, owner) {
 /**
  * Adds the source files.
  *
- * @function (arg1, arg2, arg3, arg4)
+ * @function (arg1, arg2, arg3, arg4, arg5)
  * @private
  * @param {String}          the source path,
  * @param {String}          the destination path,
  * @param {String}          the destination folder,
  * @param {String}          the name of the app,
+ * @param {String}          the name of the boilerplate,
  * @returns {}              -,
  */
-function _addSrc(source, dest, folder, app) {
+function _addSrc(source, dest, folder, app, boilerlib) {
   const exclude = [];
 
   // Copy contents of source folder recursively to dest:
@@ -363,15 +375,16 @@ function _addSrc(source, dest, folder, app) {
 /**
  * Adds the task files.
  *
- * @function (arg1, arg2, arg3, arg4)
+ * @function (arg1, arg2, arg3, arg4, arg5)
  * @private
  * @param {String}          the source path,
  * @param {String}          the destination path,
  * @param {String}          the destination folder,
  * @param {String}          the App name,
+ * @param {String}          the name of the boilerplate,
  * @returns {}              -,
  */
-function _addTasks(source, dest, folder, app) {
+function _addTasks(source, dest, folder, app, boilerlib) {
   const exclude = []
       , boiler  = '{{boiler:name}}'
       , ver     = '{{boiler:name:version}}'
@@ -395,15 +408,16 @@ function _addTasks(source, dest, folder, app) {
 /**
  * Adds the test files.
  *
- * @function (arg1, arg2, arg3, arg4)
+ * @function (arg1, arg2, arg3, arg4, arg5)
  * @private
  * @param {String}          the source path,
  * @param {String}          the destination path,
  * @param {String}          the destination folder,
  * @param {String}          the name of the app,
+ * @param {String}          the name of the boilerplate,
  * @returns {}              -,
  */
-function _addTest(source, dest, folder, app) {
+function _addTest(source, dest, folder, app, boilerlib) {
   const exclude = [];
 
   process.stdout.write(`  duplicated the contents of ${folder}\n`);
@@ -431,6 +445,10 @@ function _addTest(source, dest, folder, app) {
  * @returns {}        -,
  */
 function _populate(options) {
+  const boilerlib = options && options.boilerlib && options.boilerlib !== 'true'
+    ? options.boilerlib
+    : defBoilerLib;
+
   const app = options && options.name && options.name !== 'true'
     ? options.name
     : 'myApp';
@@ -474,16 +492,16 @@ function _populate(options) {
   _duplicate(baseboiler, baseapp);
 
   // Add and customize package.json:
-  _customize(baseboiler, baseapp, app, author);
+  _customize(baseboiler, baseapp, app, author, boilerlib);
 
   // Copy the src files:
-  _addSrc(baseboiler, baseapp, src, app);
+  _addSrc(baseboiler, baseapp, src, app, boilerlib);
 
   // Add tasks:
-  _addTasks(baseboiler, baseapp, tasks, app);
+  _addTasks(baseboiler, baseapp, tasks, app, boilerlib);
 
   // Copy Test Files:
-  _addTest(baseboiler, baseapp, test, app);
+  _addTest(baseboiler, baseapp, test, app, boilerlib);
 
   process.stdout.write('Done. Enjoy!\n');
 }
@@ -495,7 +513,7 @@ if (parsed.help) {
 }
 
 if (parsed.version) {
-  process.stdout.write(`${boilerlib} version: ${parsed.version}\n`);
+  process.stdout.write(`version: ${parsed.version}\n`);
   process.exit(0);
 }
 

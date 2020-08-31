@@ -7,7 +7,7 @@
 
 
 // -- Local Modules
-const ES6Kadoo = require('../index')
+const ES6Kadoo = require('../index.js')
     // ES6Kadoo = require('../src/prototypal').default
     , pack     = require('../package.json')
     , testlib  = require('./int/libprototypal')
@@ -33,6 +33,6 @@ const libname = 'ES6Kadoo';
 // '{{lib:version}}' as the library version.
 
 describe('Test ES6Kadoo:', () => {
-  // testlib(ES6Kadoo, '{{lib:name}}', '{{lib:version}}');
-  testlib(ES6Kadoo, libname, pack.version);
+  // testlib(ES6Kadoo, '{{lib:name}}', '{{lib:version}}', 'without new');
+  testlib(ES6Kadoo, libname, pack.version, 'without new');
 });

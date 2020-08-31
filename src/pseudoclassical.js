@@ -144,6 +144,7 @@ ES6Kadoo.prototype = {
 
   /**
    * Returns a string.
+   * (must be deleted)
    *
    * @method ()
    * @public
@@ -157,6 +158,7 @@ ES6Kadoo.prototype = {
 
   /**
    * Returns an array.
+   * (must be deleted)
    *
    * @method ()
    * @public

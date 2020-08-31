@@ -1,10 +1,10 @@
 {
   "name": "@mobilabs/es6kadoo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A template for writing pure ES6 Javascript libraries",
   "main": "index.js",
   "minified": "_dist/lib/es6kadoo.min.js",
-  "unpkg": "_dist/lib/es6kadoo.min.js",
+  "unpkg": "_dist/lib/es6kadoo.mjs",
   "module": "_dist/lib/es6kadoo.min.mjs",
   "bin": {
     "es6kadoo": "./bin/es6kadoo.js"
@@ -72,7 +72,8 @@
     "mocha": "^8.1.2",
     "nyc": "^15.1.0",
     "open": "^7.2.0",
-    "opener": "^1.5.1"
+    "opener": "^1.5.1",
+    "@mobilabs/es6lib": "1.0.2"
   },
   "publishConfig": {
     "access": "public"

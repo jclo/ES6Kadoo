@@ -1,5 +1,11 @@
 ### HEAD
 
+### 1.0.2 (August 31, 2020)
+
+  * Fixed a few typos and commented the test suite,
+  * ...,
+
+
 ### 1.0.1 (August 29, 2020)
 
   * Updated es6kadoo.js script to make easier the project creation,

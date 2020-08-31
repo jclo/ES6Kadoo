@@ -19,6 +19,9 @@ The build doesn't require a transpiler (like babel) or a builder (like browserif
 
 `ES6Kadoo` uses [Travis CI](https://travis-ci.org) for continuous integration and [Coveralls.io](https://coveralls.io) to display test coverage.
 
+Nota:  
+`ES6Kadoo` is a fork of the boilerplate [ES6lib](https://www.npmjs.com/package/@mobilabs/es6lib).
+
 
 ## Quick Startup
 
@@ -52,7 +55,7 @@ Then, create a `package.json` file that contains at least:
   }
 }
 ```
-Replace `MyApp` by your project name, fill `writer` with your credentials.
+Replace `MyApp` by your project name and fill `writer` with your credentials.
 
 And finally, type in the terminal:
 

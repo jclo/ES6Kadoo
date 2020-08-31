@@ -74,7 +74,7 @@ function extend(object, methods) {
 }
 
 
-// -- Main -----------------------------------------------------------------
+// -- Public ---------------------------------------------------------------
 
 const ES6Kadoo = {
 
@@ -148,6 +148,7 @@ extend(ES6Kadoo, {
 
   /**
    * Returns a string.
+   * (must be deleted)
    *
    * @method ()
    * @public
@@ -161,6 +162,7 @@ extend(ES6Kadoo, {
 
   /**
    * Returns an array.
+   * (must be deleted)
    *
    * @method ()
    * @public
