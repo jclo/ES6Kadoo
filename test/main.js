@@ -7,7 +7,7 @@
 
 
 // -- Local Modules
-const ES6Kadoo = require('../index.js')
+const ES6Kadoo = require('../index')
     // ES6Kadoo = require('../src/prototypal').default
     , pack     = require('../package.json')
     , testlib  = require('./int/libprototypal')
