@@ -161,7 +161,6 @@ Or,
 <!DOCTYPE html>
 <html>
   <body>
-    <script src="./path_to_your_lib/mylib.js"></script>
     <script type="module">
       import mylib from './<path_to_your_lib>/mylib.mjs';
 
