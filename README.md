@@ -17,7 +17,7 @@ The build doesn't require a transpiler (like babel) or a builder (like browserif
 
 `ES6Kadoo` relies on [Mocha](https://mochajs.org) and [Chai](http://chaijs.com) for unitary testing. It relies on [Istanbul](https://gotwarlost.github.io/istanbul/) for code coverage.
 
-`ES6Kadoo` uses [Travis CI](https://travis-ci.org) for continuous integration and [Coveralls.io](https://coveralls.io) to display test coverage.
+`ES6Kadoo` uses [Travis CI](https://travis-ci.com) for continuous integration and [Coveralls.io](https://coveralls.io) to display test coverage.
 
 Nota:  
 `ES6Kadoo` is a fork of the boilerplate [ES6lib](https://www.npmjs.com/package/@mobilabs/es6lib).
@@ -191,7 +191,7 @@ Enjoy!
 [npm-url]: https://www.npmjs.com/package/@mobilabs/es6kadoo
 [release-url]: https://github.com/jclo/es6kadoo/tags
 [commit-url]: https://github.com/jclo/es6kadoo/commits/master
-[travis-url]: https://travis-ci.org/jclo/es6kadoo
+[travis-url]: https://travis-ci.com/jclo/es6kadoo
 [coveralls-url]: https://coveralls.io/github/jclo/es6kadoo?branch=master
 [dependencies-url]: https://david-dm.org/jclo/es6kadoo
 [devdependencies-url]: https://david-dm.org/jclo/es6kadoo?type=dev
