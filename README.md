@@ -4,10 +4,10 @@
 [![GitHub last commit][commit-image]][commit-url]
 [![Travis CI][travis-image]][travis-url]
 [![Test coverage][coveralls-image]][coveralls-url]
-[![Dependencies status][dependencies-image]][dependencies-url]
-[![Dev Dependencies status][devdependencies-image]][devdependencies-url]
 [![npm bundle size][npm-bundle-size-image]][npm-bundle-size-url]
 [![License][license-image]](LICENSE.md)
+<!-- [![Dependencies status][dependencies-image]][dependencies-url]
+[![Dev Dependencies status][devdependencies-image]][devdependencies-url] -->
 
 `ES6Kadoo` is a boilerplate for writing ES6 Javascript libraries that run on both Node.js and ECMAScript 2015 (ES6) compliant browsers.
 
@@ -178,20 +178,20 @@ Enjoy!
 
 <!--- URls -->
 
-[npm-image]: https://img.shields.io/npm/v/@mobilabs/es6kadoo.svg?style=flat-square
-[release-image]: https://img.shields.io/github/release/jclo/es6kadoo.svg?include_prereleases&style=flat-square
-[commit-image]: https://img.shields.io/github/last-commit/jclo/es6kadoo.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/jclo/es6kadoo.svg?style=flat-square
-[coveralls-image]: https://img.shields.io/coveralls/jclo/es6kadoo/master.svg?style=flat-square
+[npm-image]: https://img.shields.io/npm/v/@mobilabs/es6kadoo.svg?logo=npm&logoColor=fff&label=NPM+package
+[release-image]: https://img.shields.io/github/release/jclo/es6kadoo.svg?include_prereleases
+[commit-image]: https://img.shields.io/github/last-commit/jclo/es6kadoo.svg?logo=github
+[travis-image]: https://img.shields.io/travis/com/jclo/es6kadoo.svg?logo=travis-ci&logoColor=fff
+[coveralls-image]: https://img.shields.io/coveralls/jclo/es6kadoo/master.svg?&logo=coveralls
 [dependencies-image]: https://david-dm.org/jclo/es6kadoo/status.svg?theme=shields.io
 [devdependencies-image]: https://david-dm.org/jclo/es6kadoo/dev-status.svg?theme=shields.io
-[npm-bundle-size-image]: https://img.shields.io/bundlephobia/minzip/@mobilabs/es6kadoo.svg?style=flat-square
-[license-image]: https://img.shields.io/npm/l/@mobilabs/es6kadoo.svg?style=flat-square
+[npm-bundle-size-image]: https://img.shields.io/bundlephobia/minzip/@mobilabs/es6kadoo.svg
+[license-image]: https://img.shields.io/npm/l/@mobilabs/es6kadoo.svg
 
 [npm-url]: https://www.npmjs.com/package/@mobilabs/es6kadoo
 [release-url]: https://github.com/jclo/es6kadoo/tags
 [commit-url]: https://github.com/jclo/es6kadoo/commits/master
-[travis-url]: https://travis-ci.com/jclo/es6kadoo
+[travis-url]: https://app.travis-ci.com/jclo/es6kadoo?branch=main
 [coveralls-url]: https://coveralls.io/github/jclo/es6kadoo?branch=master
 [dependencies-url]: https://david-dm.org/jclo/es6kadoo
 [devdependencies-url]: https://david-dm.org/jclo/es6kadoo?type=dev
