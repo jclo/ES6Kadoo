@@ -35,6 +35,12 @@ module.exports = {
   // 'pseudoclassical.js' and pseudoclassical-auto.js' are mutually exclusives.
   source,
 
+  webfiles: [
+    // These are the files to copy to the root path of the web app,
+    './README.md',
+    './LICENSE.md',
+  ],
+
   get license() {
     return ['/*! ****************************************************************************',
       ` * ${libname} v${pack.version}`,
