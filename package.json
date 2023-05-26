@@ -87,7 +87,7 @@
     "nodemon": "^2.0.22",
     "nyc": "^15.1.0",
     "terser": "^5.17.4",
-    "@mobilabs/es6lib": "1.1.1"
+    "@mobilabs/es6lib": "1.1.2"
   },
   "publishConfig": {
     "access": "public"
