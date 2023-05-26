@@ -4,7 +4,7 @@
 
   * Fixed a few typos,
   * Fixed a Travic CI build issue,
-  * ...,
+  * Release.
 
 
 ### 1.1.0 (May 24, 2023)
