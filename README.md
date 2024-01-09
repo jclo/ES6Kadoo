@@ -180,7 +180,7 @@ Enjoy!
 [npm-image]: https://img.shields.io/npm/v/@mobilabs/es6kadoo.svg?logo=npm&logoColor=fff&label=NPM+package
 [release-image]: https://img.shields.io/github/release/jclo/es6kadoo.svg?include_prereleases
 [commit-image]: https://img.shields.io/github/last-commit/jclo/es6kadoo.svg?logo=github
-[ci-image]: https://github.com/jclo/es6lib/actions/workflows/ci.yml/badge.svg
+[ci-image]: https://github.com/jclo/es6kadoo/actions/workflows/ci.yml/badge.svg
 [coveralls-image]: https://img.shields.io/coveralls/jclo/es6kadoo/master.svg?&logo=coveralls
 [npm-bundle-size-image]: https://img.shields.io/bundlephobia/minzip/@mobilabs/es6kadoo.svg
 [license-image]: https://img.shields.io/npm/l/@mobilabs/es6kadoo.svg
@@ -188,7 +188,7 @@ Enjoy!
 [npm-url]: https://www.npmjs.com/package/@mobilabs/es6kadoo
 [release-url]: https://github.com/jclo/es6kadoo/tags
 [commit-url]: https://github.com/jclo/es6kadoo/commits/master
-[ci-url]: https://github.com/jclo/es6lib/actions/workflows/ci.yml
+[ci-url]: https://github.com/jclo/es6kadoo/actions/workflows/ci.yml
 [coveralls-url]: https://coveralls.io/github/jclo/es6kadoo?branch=master
 [npm-bundle-size-url]: https://img.shields.io/bundlephobia/minzip/@mobilabs/es6kadoo
 [license-url]: http://opensource.org/licenses/MIT

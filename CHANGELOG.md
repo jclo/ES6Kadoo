@@ -3,6 +3,7 @@
 ### 1.1.x (January 9, 2024)
 
   * Updated the  project with @ES6lib v2 (c8, Github Actions),
+  * Renamed properly .github folder,
   * ...,
 
 
