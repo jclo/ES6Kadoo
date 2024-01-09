@@ -2,6 +2,12 @@
 
 ### 2.0.0 (January 9, 2024)
 
+  * Fixed an issue in ./bin/es6kadoo.js that prevented the creation of a .github folder,
+  * ...,
+
+
+### 2.0.0 (January 9, 2024)
+
   * Updated the  project with @ES6lib v2 (c8, Github Actions),
   * Renamed properly .github folder,
   * Release.
