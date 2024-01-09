@@ -1,10 +1,10 @@
 ### HEAD
 
-### 1.1.x (January 9, 2024)
+### 2.0.0 (January 9, 2024)
 
   * Updated the  project with @ES6lib v2 (c8, Github Actions),
   * Renamed properly .github folder,
-  * ...,
+  * Release.
 
 
 ### 1.1.1 (May 26, 2023)
