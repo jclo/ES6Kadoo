@@ -1,9 +1,9 @@
 ### HEAD
 
-### 2.0.0 (January 9, 2024)
+### 2.0.1 (January 9, 2024)
 
   * Fixed an issue in ./bin/es6kadoo.js that prevented the creation of a .github folder,
-  * ...,
+  * Release.
 
 
 ### 2.0.0 (January 9, 2024)
