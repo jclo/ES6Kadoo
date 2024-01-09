@@ -2,12 +2,10 @@
 
 [![NPM version][npm-image]][npm-url]
 [![GitHub last commit][commit-image]][commit-url]
-[![Travis CI][travis-image]][travis-url]
+[![Github workflow][ci-image]][ci-url]
 [![Test coverage][coveralls-image]][coveralls-url]
 [![npm bundle size][npm-bundle-size-image]][npm-bundle-size-url]
 [![License][license-image]](LICENSE.md)
-<!-- [![Dependencies status][dependencies-image]][dependencies-url]
-[![Dev Dependencies status][devdependencies-image]][devdependencies-url] -->
 
 `ES6Kadoo` is a boilerplate for writing ES6 Javascript libraries that run on both Node.js and ECMAScript 2015 (ES6) compliant browsers.
 
@@ -17,7 +15,7 @@ The build doesn't require a transpiler (like babel) or a builder (like browserif
 
 `ES6Kadoo` relies on [Mocha](https://mochajs.org) and [Chai](http://chaijs.com) for unitary testing. It relies on [Istanbul](https://gotwarlost.github.io/istanbul/) for code coverage.
 
-`ES6Kadoo` uses [Travis CI](https://travis-ci.com) for continuous integration and [Coveralls.io](https://coveralls.io) to display test coverage.
+`ES6Kadoo` uses [Github Actions](https://docs.github.com/en/actions) for continuous integration and [Coveralls.io](https://coveralls.io) to display test coverage.
 
 Nota:  
 `ES6Kadoo` is a fork of the boilerplate [ES6lib](https://www.npmjs.com/package/@mobilabs/es6lib).
@@ -56,6 +54,9 @@ That's almost all! When the script has been executed, your folder contains the f
 
 ```bash
 Your project Folder
+      |_ .github
+      |     |_ workflows
+      |           |_ ci.yml    // Github Workflow file (if you use it),
       |_ lib
       |   |_ lib.js           // Your built UMD module,
       |   |_ lib.mjs          // Your built ES6 module,
@@ -71,7 +72,6 @@ Your project Folder
       |_ .eslintrc            // A Configuration file for the ESLint linter tool (if you use it),
       |_ .gitignore           // Files that Git must ignore (if you use git),
       |_ .npmignore           // Files that Npm must ignore (optional),
-      |_ .travis.yml          // A configuration file for Travis CI (if you use it),
       |_ .CHANGELOG.md        // The changes between your different versions,
       |_ index.js             // The link to your ES5 library,
       |_ LICENSE.md           // The license that applies to your library (here MIT),
@@ -180,19 +180,15 @@ Enjoy!
 [npm-image]: https://img.shields.io/npm/v/@mobilabs/es6kadoo.svg?logo=npm&logoColor=fff&label=NPM+package
 [release-image]: https://img.shields.io/github/release/jclo/es6kadoo.svg?include_prereleases
 [commit-image]: https://img.shields.io/github/last-commit/jclo/es6kadoo.svg?logo=github
-[travis-image]: https://img.shields.io/travis/com/jclo/es6kadoo.svg?logo=travis-ci&logoColor=fff
+[ci-image]: https://github.com/jclo/es6lib/actions/workflows/ci.yml/badge.svg
 [coveralls-image]: https://img.shields.io/coveralls/jclo/es6kadoo/master.svg?&logo=coveralls
-[dependencies-image]: https://david-dm.org/jclo/es6kadoo/status.svg?theme=shields.io
-[devdependencies-image]: https://david-dm.org/jclo/es6kadoo/dev-status.svg?theme=shields.io
 [npm-bundle-size-image]: https://img.shields.io/bundlephobia/minzip/@mobilabs/es6kadoo.svg
 [license-image]: https://img.shields.io/npm/l/@mobilabs/es6kadoo.svg
 
 [npm-url]: https://www.npmjs.com/package/@mobilabs/es6kadoo
 [release-url]: https://github.com/jclo/es6kadoo/tags
 [commit-url]: https://github.com/jclo/es6kadoo/commits/master
-[travis-url]: https://app.travis-ci.com/jclo/es6kadoo?branch=main
+[ci-url]: https://github.com/jclo/es6lib/actions/workflows/ci.yml
 [coveralls-url]: https://coveralls.io/github/jclo/es6kadoo?branch=master
-[dependencies-url]: https://david-dm.org/jclo/es6kadoo
-[devdependencies-url]: https://david-dm.org/jclo/es6kadoo?type=dev
-[license-url]: http://opensource.org/licenses/MIT
 [npm-bundle-size-url]: https://img.shields.io/bundlephobia/minzip/@mobilabs/es6kadoo
+[license-url]: http://opensource.org/licenses/MIT
