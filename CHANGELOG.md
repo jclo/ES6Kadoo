@@ -1,5 +1,11 @@
 ### HEAD
 
+### 2.0.2 (January 11, 2024)
+
+  * Updated the project with @mobilabs/es6lib v2.0.3,
+  * ...,
+
+
 ### 2.0.1 (January 9, 2024)
 
   * Fixed an issue in ./bin/es6kadoo.js that prevented the creation of a .github folder,
