@@ -132,3 +132,5 @@ module.exports = function(ES6Kadoo, libname, version) {
     });
   });
 };
+
+// - oOo --

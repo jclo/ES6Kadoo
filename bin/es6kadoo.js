@@ -39,10 +39,10 @@ const fs    = require('fs')
     ;
 
 
-// -- Local modules
+// -- Local Modules
 
 
-// -- Local Variables
+// -- Local Constants
 const defBoilerLib  = 'ES6Kadoo'
     /* eslint-disable-next-line object-curly-newline */
     , defAuthor   = { name: 'John Doe', acronym: 'jdo', email: 'jdo@johndoe.com', url: 'http://www.johndoe.com' }
@@ -71,15 +71,18 @@ const defBoilerLib  = 'ES6Kadoo'
       h: ['--help'],
       v: ['--version', version],
       p: ['--path'],
-      b: ['--boilerlib'],
-      n: ['--name'],
-      a: ['--author'],
-      c: ['--acronym'],
-      e: ['--email'],
-      u: ['--url'],
+      b: ['--boilerlib', defBoilerLib],
+      n: ['--name', defAuthor.name],
+      a: ['--author', defAuthor.name],
+      c: ['--acronym', defAuthor.acronym],
+      e: ['--email', defAuthor.email],
+      u: ['--url', defAuthor.url],
     }
     , parsed = nopt(opts, shortOpts, process.argv, 2)
     ;
+
+
+// -- Local Variables
 
 
 // -- Templates
@@ -138,23 +141,27 @@ const changelog = [
 
 const index = [
   "module.exports = require('./lib/{{lib:lowname}}');",
-  ''].join('\n');
+  '',
+].join('\n');
 
 const gitignore = [
   '.DS_Store',
   '',
   'coverage',
   'node_modules',
-  ''].join('\n');
+  '',
+].join('\n');
 
 const eslintignore = [
   '_dist/lib/{{lib:lowname}}.min.*',
-  ''].join('\n');
+  '',
+].join('\n');
 
 const npmignore = [
   '*',
   '!_dist/**/*',
-  ''].join('\n');
+  '',
+].join('\n');
 
 
 // -- Private Functions --------------------------------------------------------
@@ -546,19 +553,66 @@ function _populate(options) {
   process.stdout.write('Done. Enjoy!\n');
 }
 
+/**
+ * Runs the script.
+ *
+ * @function ()
+ * @private
+ * @param {}           -,
+ * @returns {}         -,
+ * @since 0.0.0
+ */
+function _run() {
+  if (parsed.help) {
+    _help();
+  }
 
-// -- Main
-if (parsed.help) {
+  if (parsed.version) {
+    process.stdout.write(`version: ${parsed.version}\n`);
+    return;
+  }
+
+  if (parsed.boilerlib) {
+    process.stdout.write(`boilerlib: ${parsed.boilerlib}\n`);
+    if (!parsed.argv.remain[0]) return;
+  }
+
+  if (parsed.name) {
+    process.stdout.write(`name: ${parsed.name}\n`);
+    if (!parsed.argv.remain[0]) return;
+  }
+
+  if (parsed.author) {
+    process.stdout.write(`author: ${parsed.author}\n`);
+    if (!parsed.argv.remain[0]) return;
+  }
+
+  if (parsed.acronym) {
+    process.stdout.write(`acronym: ${parsed.acronym}\n`);
+    if (!parsed.argv.remain[0]) return;
+  }
+
+  if (parsed.email) {
+    process.stdout.write(`email: ${parsed.email}\n`);
+    if (!parsed.argv.remain[0]) return;
+  }
+
+  if (parsed.url) {
+    process.stdout.write(`url: ${parsed.url}\n`);
+    if (!parsed.argv.remain[0]) return;
+  }
+
+  if (parsed.argv.remain[0] === 'populate') {
+    _populate(parsed);
+    return;
+  }
+
   _help();
 }
 
-if (parsed.version) {
-  process.stdout.write(`version: ${parsed.version}\n`);
-  process.exit(0);
-}
 
-if (parsed.argv.remain[0] === 'populate') {
-  _populate(parsed);
-} else {
-  _help();
-}
+// -- Where the script starts --------------------------------------------------
+_run();
+
+
+// -- oOo ---
