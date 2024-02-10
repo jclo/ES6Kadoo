@@ -43,4 +43,5 @@ describe('Test ES6Kadoo:', () => {
   // testlib(ES6Kadoo, libname, pack.version, 'without new');
 });
 
+
 // - oOo --

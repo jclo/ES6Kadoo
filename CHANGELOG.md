@@ -1,5 +1,11 @@
 ### HEAD
 
+### 2.1.2 (February 10, 2024)
+
+  * Updated the project with @mobilabs/es6lib v2.2.2 (removed typos in build scripts),
+  * ...,
+
+
 ### 2.1.1 (February 9, 2024)
 
   * Updated the project with @mobilabs/es6lib v2.2.1 (improved build scripts),
