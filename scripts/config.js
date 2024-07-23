@@ -35,6 +35,7 @@ const libname = 'ES6Kadoo'
 
 module.exports = {
   ES6GLOB: '$__ES6GLOB',
+  root: '.',
   dist: './_dist',
   libdir: './lib',
   libname,
