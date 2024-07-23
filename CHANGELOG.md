@@ -1,5 +1,11 @@
 ### HEAD
 
+### 2.2.1 (July 23, 2024)
+
+  * Readded lost bin/es6kadoo.js script,
+  * ...,
+
+
 ### 2.2.0 (July 23, 2024)
 
   * Updated the project with @mobilabs/es6lib v2.3.0 (updated dependencies),
