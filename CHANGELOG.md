@@ -3,7 +3,7 @@
 ### 2.2.1 (July 23, 2024)
 
   * Readded lost bin/es6kadoo.js script,
-  * ...,
+  * Release.
 
 
 ### 2.2.0 (July 23, 2024)

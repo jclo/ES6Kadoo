@@ -1,6 +1,6 @@
 {
   "name": "@mobilabs/es6kadoo",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "A template for writing pure ES6 Javascript libraries",
   "main": "_dist/lib/es6kadoo.js",
   "minified": "_dist/lib/es6kadoo.min.js",
